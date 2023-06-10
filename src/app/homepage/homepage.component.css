@@ -1,0 +1,42 @@
+/* 
+webApplicationDevelopment - assignmetn1
+Student Name: Li Ying Lam
+Student ID:301246753 
+Date: Jun 10 2023 */
+
+.intro {
+  font-size: 20px;
+  color: grey;
+}
+
+#myname {
+  color: rgb(192, 16, 192);
+}
+
+p {
+  font-size: 3rem;
+}
+
+.subject {
+  color: rgb(192, 16, 192);
+}
+
+a:link {
+  text-decoration: none;
+  color: grey;
+}
+
+div {
+  margin-left: 20%;
+  margin-top: 200px;
+  border-left: 3px solid rgb(192, 16, 192);
+  padding-left: 30px;
+}
+
+.student {
+  font-family: cursive;
+}
+
+.home-container {
+  height: 450px;
+}

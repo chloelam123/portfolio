@@ -1,0 +1,79 @@
+/* 
+webApplicationDevelopment - assignmetn1
+Student Name: Li Ying Lam
+Student ID:301246753 
+Date: Jun 10 2023 */
+.contact-container {
+  background-image: url("../../assets/black.jpg");
+  background-size: ccontain;
+  width: 980px;
+  height: 600px;
+  margin-top: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.infor-section {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 2rem;
+  margin-left: 100px;
+}
+
+.mail-section {
+  background-color: white;
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  margin-top: 50px;
+  color: black;
+  text-align: center;
+  margin-right: 50px;
+}
+
+.mail-title {
+  color: black;
+  font-size: 3rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+input {
+  margin-left: 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: #f1f1f1;
+  padding: 8px 10px;
+  width: 300px;
+  font-size: medium;
+  padding: 12px 20px;
+}
+
+input[type="text"]:focus {
+  border: 2px solid #d59931;
+  outline: none;
+  transition: 0.5s;
+  width: 300px;
+}
+
+textarea {
+  margin-left: 20px;
+  background-color: #f8f8f8;
+  resize: none;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.button {
+  color: white;
+  background-color: #681368;
+}
+
+.button:hover {
+  background-color: #d87acc;
+}
+
+.girl-icon {
+  font-size: 80px;
+}

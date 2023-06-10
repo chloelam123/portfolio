@@ -1,0 +1,45 @@
+/* 
+webApplicationDevelopment - assignmetn1
+Student Name: Li Ying Lam
+Student ID:301246753 
+Date: Jun 10 2023 */
+.project-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 900px;
+}
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+  width: 300;
+  border: 1px solid gray;
+  box-shadow: 12px 12px 2px 1px rgba(231, 231, 87, 0.2);
+  border-radius: 3px;
+}
+
+img {
+  width: 200px;
+  height: 250px;
+}
+
+p {
+  word-break: break-all;
+  color: gray;
+  text-align: center;
+  padding: 2px;
+  padding-left: 20px;
+  padding-right: 15px;
+  width: 200px;
+}
+
+.project-describe {
+  background-color: white;
+  height: 142px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 50px;
+}

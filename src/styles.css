@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+/* 
+webApplicationDevelopment - assignmetn1
+Student Name: Li Ying Lam
+Student ID:301246753 
+Date: Jun 10 2023 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Gill Sans", sans-serif;
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
