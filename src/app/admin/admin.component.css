@@ -1,5 +1,5 @@
 .contact-container {
-  background-image: url('../../assets/userbg.png');
+  background-image: url("../../assets/userbg.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-color: black;
@@ -81,7 +81,9 @@ td {
 
 .action:hover {
   background-color: rgb(43, 192, 48);
+  cursor: pointer;
 }
 .action-delete:hover {
   background-color: rgb(187, 34, 70);
+  cursor: pointer;
 }

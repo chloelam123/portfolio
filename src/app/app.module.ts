@@ -18,7 +18,6 @@ import { AdminComponent } from './admin/admin.component';
 import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
 import { SecureComponent } from './secure/secure.component';
-import { AuthGuard } from './auth.guard';
 
 const appRoutes: Routes = [
   { path: '', component: HomepageComponent },
@@ -27,7 +26,7 @@ const appRoutes: Routes = [
   { path: 'services', component: ServicesComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'secure', component: SecureComponent, canActivate: [AuthGuard] },
+  { path: 'secure', component: SecureComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'admin', component: AdminComponent },
   { path: 'updateUser/:id', component: UpdateComponent },
@@ -58,7 +57,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
   ],
   exports: [RouterModule],
-  providers: [AuthGuard], //Add AuthGuard to providers
+  providers: [], //Add AuthGuard to providers
   bootstrap: [AppComponent],
 })
 export class AppModule {}

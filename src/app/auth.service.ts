@@ -18,16 +18,24 @@ export class AuthService {
 
   // Check if the user is authenticated
   isAuthenticated(): boolean {
-    return this.isLoggedInSubject.getValue();
+    // return this.isLoggedInSubject.getValue();
+    return localStorage.getItem('token') !== null;
   }
 
   //set the login/logout status
-  setLoggedIn(value: boolean): void {
-    this.isLoggedInSubject.next(value);
+  // setLoggedIn(value: boolean): void {
+  //   // this.isLoggedInSubject.next(value);
+  //   localStorage.getItem('token');
+  // }
+
+  getToken(): string {
+    return localStorage.getItem('token');
   }
 
-  setToken(value: string): void {
-    this.token.next(value);
+  setToken(token: string): void {
+    // this.token.next(value);
+    // save to localstorage
+    localStorage.setItem('token', token);
   }
 
   //login method

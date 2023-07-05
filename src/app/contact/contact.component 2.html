@@ -1,0 +1,81 @@
+<!-- webApplicationDevelopment - assignmetn1
+Student Name: Li Ying Lam
+Student ID:301246753 
+Date: Jun 10 2023  -->
+
+<!-- Using CSS Flexbox to design -->
+<div class="contact-container">
+  <!-- The area of sending email for reader -->
+  <div class="mail-section">
+    <h2 class="mail-title">Send me message</h2>
+    <form
+      action="mailto: llam69@my.centennialcollege.ca"
+      method="post"
+      enctype="text/plain"
+    >
+      <p>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          tabindex="1"
+          placeholder="&#9863; Name"
+          required
+        />
+      </p>
+      <p>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          tabindex="5"
+          placeholder="&#9993; Email"
+          required
+        />
+      </p>
+      <p>
+        <input
+          type="text"
+          id="phone"
+          name="phone"
+          tabindex="7"
+          placeholder="&#9742; Phone"
+        />
+      </p>
+
+      <p>
+        <textarea
+          id="txt"
+          name="text"
+          cols="35"
+          rows="4"
+          tabindex="33"
+          placeholder=" &hearts; Message"
+          required
+        ></textarea>
+      </p>
+      <p>
+        <input
+          routerLink="/"
+          type="submit"
+          class="button"
+          name="btnSubmit"
+          value="Send"
+          tabindex="35"
+          required
+        />
+      </p>
+    </form>
+  </div>
+  <!-- providing basics information  -->
+  <div class="infor-section">
+    <p class="girl-icon">👧🏻</p>
+    <p>Chloe Lam</p>
+    <p><fa-icon [icon]="faMobileRetro"></fa-icon> 437-973-8855</p>
+    <p>
+      <fa-icon [icon]="faEnvelopeCircleCheck"></fa-icon> Email:
+      llam69@my.centennialcollege.ca
+    </p>
+    <p><fa-icon [icon]="faHomeUser"></fa-icon> Address: Markham, ON</p>
+  </div>
+</div>

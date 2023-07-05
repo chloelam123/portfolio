@@ -41,8 +41,10 @@ export class LoginComponent implements OnInit {
         console.log('Login successful');
         console.log(response);
         console.log((response as any)?.token);
-        this.authService.setLoggedIn(true);
+
         this.authService.setToken((response as any)?.token);
+        // this.authService.setLoggedIn(true);
+
         this.router.navigate(['/admin']);
         const token = (response as any)?.token;
         console.log(token);
@@ -58,7 +60,7 @@ export class LoginComponent implements OnInit {
           this.errorMessage = error.error.message;
         } else {
           this.errorMessage = error.statusText;
-          this.authService.setLoggedIn(false);
+          // this.authService.setLoggedIn(false);
         }
       }
     );

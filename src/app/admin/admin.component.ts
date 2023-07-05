@@ -19,9 +19,10 @@ export class AdminComponent implements OnInit {
     private authService: AuthService,
     private router: Router
   ) {
-    this.authService.token$.subscribe((token) => {
-      this.token = token;
-    });
+    // this.authService.token$.subscribe((token) => {
+    this.token = authService.getToken();
+
+    // });
   }
   redirectToUpdate(userId: string): void {
     this.router.navigate(['/updateUser', userId]);
@@ -32,7 +33,8 @@ export class AdminComponent implements OnInit {
 
   ngOnInit(): void {
     this.authService.token$.subscribe((token) => {
-      this.token = token;
+      // this.token = token;
+      this.token = this.authService.getToken();
       this.fetchContacts();
     });
   }

@@ -13,13 +13,15 @@ export class AppComponent {
   isLoggedIn: boolean = false;
 
   constructor(private authService: AuthService) {
-    this.authService.isLoggedIn$.subscribe((isLoggedIn) => {
-      this.isLoggedIn = isLoggedIn;
-    });
+    // this.authService.isLoggedIn$.subscribe((isLoggedIn) => {
+    //   this.isLoggedIn = isLoggedIn;
+    // });
+    this.isLoggedIn = authService.isAuthenticated();
   }
 
   //logout
   logout() {
-    this.authService.setLoggedIn(false);
+    // this.authService.setLoggedIn(false);
+    localStorage.clear();
   }
 }
