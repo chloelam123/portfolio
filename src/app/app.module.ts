@@ -18,19 +18,23 @@ import { AdminComponent } from './admin/admin.component';
 import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
 import { SecureComponent } from './secure/secure.component';
+import { authGuardGuard } from './auth-guard.guard';
 
 const appRoutes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'about', component: AboutComponent },
   { path: 'projects', component: ProjectComponent },
   { path: 'services', component: ServicesComponent },
+  // { path: 'services', component: ServicesComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: 'secure', component: SecureComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'admin', component: AdminComponent },
+  // { path: 'admin', component: AdminComponent },
+  { path: 'admin', component: AdminComponent, canActivate: [authGuardGuard] },
   { path: 'updateUser/:id', component: UpdateComponent },
   { path: 'deleteUser/:id', component: DeleteComponent },
+  { path: '**', component: LoginComponent },
 ];
 
 @NgModule({

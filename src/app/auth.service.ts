@@ -28,6 +28,11 @@ export class AuthService {
   //   localStorage.getItem('token');
   // }
 
+  setLoggedOut(): void {
+    localStorage.removeItem('token');
+    this.isLoggedInSubject.next(false);
+  }
+
   getToken(): string {
     return localStorage.getItem('token');
   }
@@ -36,6 +41,7 @@ export class AuthService {
     // this.token.next(value);
     // save to localstorage
     localStorage.setItem('token', token);
+    this.isLoggedInSubject.next(true);
   }
 
   //login method
