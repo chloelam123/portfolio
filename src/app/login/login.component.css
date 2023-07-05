@@ -3,8 +3,11 @@ webApplicationDevelopment - assignmetn1
 Student Name: Li Ying Lam
 Student ID:301246753 
 Date: Jun 10 2023 */
-.contact-container {
-  background-image: url('../../assets/black.jpg');
+.user-container {
+  background-image: url('../../assets/userbg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: black;
   width: 980px;
   height: 600px;
   margin-top: 30px;
@@ -12,25 +15,21 @@ Date: Jun 10 2023 */
   display: flex;
   justify-content: space-between;
 }
-.infor-section {
-  margin-top: 100px;
-  text-align: center;
-  font-size: 2rem;
-  margin-left: 100px;
-}
 
-.mail-section {
+.user-section {
   background-color: white;
+  opacity: 0.7;
   width: 400px;
-  height: 500px;
+  height: 400px;
   border-radius: 10px;
-  margin-top: 50px;
+  margin-top: 80px;
   color: black;
   text-align: center;
-  margin-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.mail-title {
+.user-title {
   color: black;
   font-size: 3rem;
   margin-top: 30px;
@@ -46,27 +45,25 @@ input {
   width: 300px;
   font-size: medium;
   padding: 12px 20px;
+  margin-top: 15px;
 }
 
 input[type='text']:focus {
-  border: 2px solid #d59931;
+  border: 2px solid #a93a9b;
+  outline: none;
+  transition: 0.5s;
+  width: 300px;
+}
+input[type='password']:focus {
+  border: 2px solid #a93a9b;
   outline: none;
   transition: 0.5s;
   width: 300px;
 }
 
-textarea {
-  margin-left: 20px;
-  background-color: #f8f8f8;
-  resize: none;
-  border: none;
-  border-radius: 30px;
-  padding: 10px;
-}
-
 .button {
   color: white;
-  background-color: #681368;
+  background-color: #ab40dcd1;
 }
 
 .button:hover {
@@ -75,4 +72,9 @@ textarea {
 
 .girl-icon {
   font-size: 80px;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
 }

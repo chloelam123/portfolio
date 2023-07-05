@@ -1,0 +1,17 @@
+<div class="delete-container">
+  <div class="delete-content">
+    <div class="delete-detail">
+      <h2>Delete Contact</h2>
+
+      <form (ngSubmit)="deleteContact()">
+        <div class="contact-detail" *ngIf="selectedContact">
+          <p>Name: {{ selectedContact?.name }}</p>
+          <p>Contact Number: {{ selectedContact?.phone }}</p>
+          <p>Email: {{ selectedContact?.email }}</p>
+        </div>
+        <button type="submit">Confirm</button>
+        <button class="cancel" type="button" (click)="cancel()">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>

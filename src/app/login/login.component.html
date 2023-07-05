@@ -1,0 +1,46 @@
+<!-- webApplicationDevelopment - assignmetn1
+Student Name: Li Ying Lam
+Student ID:301246753 
+Date: Jun 10 2023  -->
+
+<!-- Using CSS Flexbox to design -->
+<div class="user-container">
+  <!-- The area of sending email for reader -->
+  <div class="user-section">
+    <h2 class="user-title">User Login</h2>
+    <form (submit)="loginUser($event)">
+      <p>
+        <fa-icon [icon]="faFaceSmile"></fa-icon>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          tabindex="1"
+          placeholder="Username"
+          required
+        />
+      </p>
+      <p>
+        <fa-icon [icon]="faKey"></fa-icon>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          tabindex="7"
+          placeholder="Password"
+        />
+      </p>
+      <p>
+        <input
+          type="submit"
+          class="button"
+          name="btnSubmit"
+          value="Login"
+          tabindex="35"
+          required
+        />
+      </p>
+      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+    </form>
+  </div>
+</div>

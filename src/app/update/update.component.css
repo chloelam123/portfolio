@@ -1,0 +1,59 @@
+input {
+  color: black;
+}
+
+label {
+  width: 100px;
+}
+
+.update-detail {
+  width: 600px;
+  margin-left: 100px;
+}
+
+h2 {
+  padding-top: 80px;
+}
+
+button {
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 70px;
+  height: 35px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+button.cancel {
+  background-color: rgb(238, 234, 242);
+  color: black;
+}
+
+button:hover {
+  background-color: rgb(4, 63, 36);
+}
+
+.contact-detail {
+  margin-top: 60px;
+}
+
+.update-container {
+  background-image: url('../../assets/userbg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: black;
+  width: 980px;
+  height: 600px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.update-content {
+  width: 780px;
+  height: 600px;
+  background-color: rgb(10, 2, 2);
+  opacity: 0.9;
+  margin-left: auto;
+  margin-right: auto;
+}
