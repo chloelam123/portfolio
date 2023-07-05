@@ -10,6 +10,10 @@ Date: Jun 10 2023  -->
     <a routerLink="/projects">Projects</a>
     <a routerLink="/services">Services</a>
     <a routerLink="/contact">Contact Me</a>
+    <a *ngIf="!isLoggedIn" routerLink="/login">Login</a>
+    <a (click)="logout()" *ngIf="isLoggedIn" routerLink="/login">Logout</a>
+    <a *ngIf="isLoggedIn" routerLink="/admin">Business</a>
+    <!-- <a routerLink="/admin">Admin</a> -->
   </div>
 </nav>
 <div><router-outlet></router-outlet></div>

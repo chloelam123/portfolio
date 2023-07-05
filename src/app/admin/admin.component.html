@@ -1,0 +1,32 @@
+<div class="contact-container">
+  <div class="contact-content">
+    <H2>Business Contacts List</H2>
+    <table>
+      <thead>
+        <tr>
+          <th class="name-contact">Name</th>
+          <th class="name-contact">Contact</th>
+          <th class="email">Email</th>
+          <th class="status">Update</th>
+          <th class="status">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contact of contacts | sortContacts">
+          <td class="name-contact">{{ contact.name }}</td>
+          <td class="name-contact">{{ contact.phone }}</td>
+          <td class="email">{{ contact.email }}</td>
+          <td (click)="redirectToUpdate(contact._id)" class="status action">
+            Update
+          </td>
+          <td
+            (click)="redirectToDelete(contact._id)"
+            class="status action-delete"
+          >
+            Delete
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
