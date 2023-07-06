@@ -1,3 +1,8 @@
+/* 
+webApplicationDevelopment - assignmetn1
+Student Name: Li Ying Lam
+Student ID:301246753 
+Date: Jul 6 2023 */
 input {
   color: black;
 }
@@ -39,7 +44,7 @@ button:hover {
 }
 
 .update-container {
-  background-image: url('../../assets/userbg.png');
+  background-image: url("../../assets/userbg.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-color: black;

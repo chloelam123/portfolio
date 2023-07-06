@@ -1,3 +1,8 @@
+/* 
+webApplicationDevelopment - assignmetn1
+Student Name: Li Ying Lam
+Student ID:301246753 
+Date: Jul 6 2023 */
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
 import { AuthService } from './auth.service';

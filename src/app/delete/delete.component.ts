@@ -1,3 +1,8 @@
+/* 
+webApplicationDevelopment - assignmetn1
+Student Name: Li Ying Lam
+Student ID:301246753 
+Date: Jul 6 2023 */
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';

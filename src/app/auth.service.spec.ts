@@ -1,3 +1,8 @@
+/* 
+webApplicationDevelopment - assignmetn1
+Student Name: Li Ying Lam
+Student ID:301246753 
+Date: Jul 6 2023 */
 import { TestBed } from '@angular/core/testing';
 
 import { AuthService } from './auth.service';

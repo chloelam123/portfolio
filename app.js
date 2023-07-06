@@ -1,12 +1,17 @@
-const express = require('express');
-const cors = require('cors');
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-const AppError = require('./server/utils/appError');
-const globalErrorHandler = require('./server/controllers/errorController');
-const userRouter = require('./server/routes/userRoutes');
+/* 
+webApplicationDevelopment - assignmetn1
+Student Name: Li Ying Lam
+Student ID:301246753 
+Date: Jul 6 2023 */
+const express = require("express");
+const cors = require("cors");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const AppError = require("./server/utils/appError");
+const globalErrorHandler = require("./server/controllers/errorController");
+const userRouter = require("./server/routes/userRoutes");
 
-dotenv.config({ path: './config.env' });
+dotenv.config({ path: "./config.env" });
 
 //call the express js
 const app = express();
@@ -15,7 +20,7 @@ app.use(cors());
 
 //Enable CORS
 const DB = process.env.DATABASE.replace(
-  '<PASSWORD>',
+  "<PASSWORD>",
   process.env.DATABASE_PASSWORD
 );
 
@@ -27,12 +32,12 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log('DB connection successful!');
+    console.log("DB connection successful!");
   });
 
-app.use('/portfolio/users', userRouter);
+app.use("/portfolio/users", userRouter);
 
-app.all('*', (req, res, next) => {
+app.all("*", (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
 
