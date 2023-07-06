@@ -19,6 +19,7 @@ import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
 import { SecureComponent } from './secure/secure.component';
 import { authGuardGuard } from './auth-guard.guard';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const appRoutes: Routes = [
   { path: '', component: HomepageComponent },
@@ -55,13 +56,13 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes, { useHash: true }),
+    RouterModule.forRoot(appRoutes),
     FontAwesomeModule,
     HttpClientModule,
     ReactiveFormsModule,
   ],
   exports: [RouterModule],
-  providers: [], //Add AuthGuard to providers
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }], //Add AuthGuard to providers
   bootstrap: [AppComponent],
 })
 export class AppModule {}
