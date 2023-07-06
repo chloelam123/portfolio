@@ -42,7 +42,9 @@ export class UpdateComponent implements OnInit {
     // Fetch the contact details from the server based on the contact ID // Retrieve the contact ID from the AuthService
     // Make an HTTP request to fetch the contact details
     this.http
-      .get<any>(`http://localhost:3000/portfolio/users/${this.userId}`)
+      .get<any>(
+        `https://profoliobackend.azurewebsites.net/portfolio/users/${this.userId}`
+      )
       .subscribe((response) => {
         this.selectedContact = (response as any)?.data.user; // Assuming the fetched data is
         // Prepopulate the form fields with the fetched contact details
@@ -65,7 +67,7 @@ export class UpdateComponent implements OnInit {
       // Make an HTTP request to update the contact details
       this.http
         .patch<any>(
-          `http://localhost:3000/portfolio/users/${this.userId}`,
+          `https://profoliobackend.azurewebsites.net/portfolio/users/${this.userId}`,
           updatedContact
         )
         .subscribe(

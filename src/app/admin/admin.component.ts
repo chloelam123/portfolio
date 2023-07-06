@@ -59,7 +59,9 @@ export class AdminComponent implements OnInit {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
 
     this.http
-      .get<any>('http://localhost:3000/portfolio/users', { headers })
+      .get<any>('https://profoliobackend.azurewebsites.net/portfolio/users', {
+        headers,
+      })
       .subscribe(
         (response) => {
           const userData = response.data.users;

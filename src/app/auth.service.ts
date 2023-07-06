@@ -10,7 +10,7 @@ export class AuthService {
     new BehaviorSubject<boolean>(false);
   private token: BehaviorSubject<string> = new BehaviorSubject<string>('');
   userId: string = '';
-  private apiUrl = 'http://localhost:3000/portfolio/users';
+  private apiUrl = 'https://profoliobackend.azurewebsites.net/portfolio/users';
   public isLoggedIn$ = this.isLoggedInSubject.asObservable();
   public token$ = this.token.asObservable();
 
@@ -55,7 +55,10 @@ export class AuthService {
       Authorization: `Bearer ${this.token.getValue()}`,
     });
 
-    return this.http.get('http://localhost:3000/portfolio/users', { headers });
+    return this.http.get(
+      'https://profoliobackend.azurewebsites.net/portfolio/users',
+      { headers }
+    );
   }
 
   setUserId(id: string): void {

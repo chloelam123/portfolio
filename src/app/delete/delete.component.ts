@@ -23,7 +23,9 @@ export class DeleteComponent implements OnInit {
   fetchContactDetails(): void {
     const contactId = this.route.snapshot.params.id;
     this.http
-      .get<any>(`http://localhost:3000/portfolio/users/${contactId}`)
+      .get<any>(
+        `https://profoliobackend.azurewebsites.net/portfolio/users/${contactId}`
+      )
       .subscribe((response) => {
         this.selectedContact = (response as any)?.data.user;
       });
@@ -32,7 +34,9 @@ export class DeleteComponent implements OnInit {
   deleteContact(): void {
     const contactId = this.route.snapshot.params.id;
     this.http
-      .delete<any>(`http://localhost:3000/portfolio/users/${contactId}`)
+      .delete<any>(
+        `https://profoliobackend.azurewebsites.net/portfolio/users/${contactId}`
+      )
       .subscribe(
         (response) => {
           console.log('Contact deleted successfully');
